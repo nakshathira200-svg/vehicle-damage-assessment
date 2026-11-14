@@ -6,3 +6,16 @@ __pycache__/
 .env.*
 *.pdf
 outputs/
+
+# Downloaded third-party policy documents - keep local
+/data/policy_docs/*.pdf
+
+# Role 3 - local RAG data and generated indexes
+/data/vector_db/
+/data/processed/*.jsonl
+/data/policy_docs/*.bak
+/data/policy_docs/*.backup
+/data/policy_docs/*.before-fix
+src/rag/*.backup
+src/rag/*.before_*
+src/pipeline/*.before_*

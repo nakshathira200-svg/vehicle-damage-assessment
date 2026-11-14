@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contract C - Final Insurance Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "claim_id",
+    "summary",
+    "line_items",
+    "totals",
+    "policy_justification",
+    "exclusions_flagged",
+    "disclaimer"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "policy_justification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["statement", "source", "page"],
+        "properties": {
+          "statement": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "page": {
+            "oneOf": [
+              {"type": "integer"},
+              {"type": "string"}
+            ]
+          }
+        }
+      }
+    },
+    "exclusions_flagged": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  }
+}

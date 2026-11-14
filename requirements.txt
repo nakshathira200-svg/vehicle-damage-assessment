@@ -4,3 +4,15 @@ pydantic
 reportlab
 pytest
 jsonschema
+
+pypdf
+
+fonttools
+
+tiktoken
+
+pdfplumber
+
+sentence-transformers
+chromadb
+rank-bm25

@@ -4,6 +4,8 @@
 This version uses mock Contract A data until the real teammate modules
 and their agreed interfaces are available.
 """
+from __future__ import annotations
+
 
 from typing import Any
 
